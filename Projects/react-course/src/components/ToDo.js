@@ -1,5 +1,7 @@
 function ToDo(props) {    //props is used as input to have a dynamic approach
-    function deleteHandler() {}
+    function deleteHandler() {
+
+    }
 
     return (
         <div className='card'>
@@ -11,4 +13,4 @@ function ToDo(props) {    //props is used as input to have a dynamic approach
     );
 }
 
-export default ToDo; 
+export default ToDo; //this always used on the end of a react to export the file
