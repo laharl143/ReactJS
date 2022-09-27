@@ -10,7 +10,7 @@ function ToDo(props) {    //props is used as input to have a dynamic approach
         setModalIsOpen(true);
     }
 
-    function closeModalHandler () {      //this is the function to close a window
+    function closeModalHandler () {      //this is the function to close an overlay
         setModalIsOpen(false);
     }
 
