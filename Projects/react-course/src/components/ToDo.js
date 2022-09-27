@@ -1,6 +1,13 @@
-function ToDo(props) {    //props is used as input to have a dynamic approach
-    function deleteHandler() {
+import { useState } from 'react';
 
+import Modal from './Modal'; //{/*this is used to import the code in Modal.js file here*/}
+import BackDrop from './BackDrop'; //{/*this is used to import the code in Backdrop.js file here*/}
+
+function ToDo(props) {    //props is used as input to have a dynamic approach
+    const [ modalIsOpen, setModalIsOpen ] = useState(false);
+    
+    function deleteHandler() {
+        setModalIsOpen(true);
     }
 
     return (
@@ -9,6 +16,8 @@ function ToDo(props) {    //props is used as input to have a dynamic approach
         <div className='actions'>
             <button className='btn' onClick={deleteHandler}>Delete</button> {/*{} curly braces on react means you can execute a javascript file in it */}
         </div>
+        {modalIsOpen && <Modal />}
+        {modalIsOpen && <BackDrop />}
     </div>
     );
 }
