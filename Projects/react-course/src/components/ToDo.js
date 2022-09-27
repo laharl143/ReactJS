@@ -6,8 +6,12 @@ import BackDrop from './BackDrop'; //{/*this is used to import the code in Backd
 function ToDo(props) {    //props is used as input to have a dynamic approach
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
     
-    function deleteHandler() {
+    function deleteHandler() {          
         setModalIsOpen(true);
+    }
+
+    function closeModalHandler () {      //this is the function to close a window
+        setModalIsOpen(false);
     }
 
     return (
@@ -16,8 +20,8 @@ function ToDo(props) {    //props is used as input to have a dynamic approach
         <div className='actions'>
             <button className='btn' onClick={deleteHandler}>Delete</button> {/*{} curly braces on react means you can execute a javascript file in it */}
         </div>
-        {modalIsOpen && <Modal />}
-        {modalIsOpen && <BackDrop />}
+        {modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
+        {modalIsOpen && <BackDrop onCancel={closeModalHandler} />}
     </div>
     );
 }

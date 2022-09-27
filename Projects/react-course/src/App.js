@@ -1,6 +1,4 @@
-import Backdrop from './components/BackDrop';    //its always essential to use import for every file
-
-import ToDo from './components/ToDo';    
+import ToDo from './components/ToDo';    //its always essential to use import for every file
 
 function App() {
   return (
