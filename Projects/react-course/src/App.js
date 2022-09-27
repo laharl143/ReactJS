@@ -4,9 +4,9 @@ function App() {
   return (
   <div>
     <h1>My Todos</h1>   
-    <ToDo />         {/*this is used to import the code in ToDo.js file here*/}
-    <ToDo /> 
-    <ToDo /> 
+    <ToDo text='Learn React' />         {/*this is used to import the code in ToDo.js file here*/}
+    <ToDo text='Master React' /> 
+    <ToDo text='Explore the full React course' /> 
   </div>
   );
 }
