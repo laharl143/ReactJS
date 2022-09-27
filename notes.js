@@ -44,6 +44,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </React.StrictMode>
 // );
 
+//////////////////////////////////////////
+#Last step:
 
+$npm install    //this is used to download all dependencies the project have and store them to the node_modules folder
 
 */
